@@ -1,3 +1,7 @@
-<h1><%= @player_1_name %> vs. <%= @player_2_name %></h1>
+<h1><%= $player_1.name %> vs. <%= $player_2.name %></h1>
 
-<h1><%= @player_2_name %> Hitpoints = 100</h1>
+<h1><%= $player_2.name %> Hitpoints = 100</h1>
+
+<FORM METHOD="Link" ACTION="/attack">
+<INPUT TYPE="submit" VALUE="Attack">
+</FORM>
