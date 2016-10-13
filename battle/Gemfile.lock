@@ -26,6 +26,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (10.4.2)
     rspec-sinatra (0.1.2)
       templater (>= 1.0.0)
     rubyzip (1.2.0)
@@ -51,6 +52,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  rake
   rspec-sinatra
   selenium-webdriver
   sinatra

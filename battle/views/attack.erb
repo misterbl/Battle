@@ -1,1 +1,7 @@
-<html><h1><%= $player_2.name %> has been attacked!</h1></html>
+<h1><%= @game.player_2.name %> has been attacked!</h1>
+<h1><%= @game.player_2.name %> has lost 10HP!</h1>
+<h1><%= @game.player_2.name %> has now got <%= @game.player_2.hp %>HP!</h1>
+
+<FORM METHOD="Link" ACTION="/play">
+<INPUT TYPE="submit" VALUE="Continue battle">
+</FORM>
