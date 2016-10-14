@@ -2,6 +2,10 @@ require './lib/player'
 class Game
 attr_reader :players
 
+class << self
+attr_accessor :game
+end
+
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
   end
@@ -21,5 +25,13 @@ attr_reader :players
 
   def turn_switcher
     @players.reverse!
+  end
+
+  def lose?
+    if (@players.first.hp || @players.last.hp) == 0
+      return true
+    else
+      return false
+    end
   end
 end
