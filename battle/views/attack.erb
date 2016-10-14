@@ -1,5 +1,5 @@
 
-<body>
+<body class="all">
 <div id="has_attacked">
 <h1><%= @game.player_2.name %><br> has attacked!</h1>
 </div>
@@ -23,10 +23,14 @@
 </body>
 
 <style>
+.all {
+  cursor: url("http://www.sherv.net/cm/emo/south-park/hanky.gif"), pointer;
+}
 body {
   background-image: url("http://spinyourfire.com/wp-content/uploads/2014/10/fire-phone-background-img2.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%
+  background-size: 100% 100%;
+    cursor: url("http://i.imgur.com/7yv9RB2.png")
 }
 
 #form {
