@@ -1,13 +1,94 @@
+
+
+<body>
 <form action="/names" method="post">
 Player1  <input type="text" name="player_1_name">
 Player2  <input type="text" name="player_2_name">
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" id="search-icon">
+  <input type="text" id="search-field" value="MotherF*****!!!" />
 </form>
+</body>
 
-<!-- <% if @name %>
-<h1>My name is <%= @name %></h1>
-<% end %>
+<style>
 
-<div style='border: 3px solid purple'>
-  <img src='http://bit.ly/1eze8aE'>
-</div> -->
+body {
+  background-image: url("https://media.giphy.com/media/4xkPCQTYd0yPe/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%
+  }
+
+form {
+  text-align: center;
+  color: #EF4E0D;
+  font-family: "Papyrus";
+  font-size: 70px;
+  font-weight: 900
+}
+
+input[type=submit] {
+ display: inline-block;
+ border-radius: 20px;
+ background-color: #2980B9;
+ border: none;
+ color: #FFFFFF ;
+ text-align: center;
+ font-size: 18px;
+ padding: 20px;
+ width: 100px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin: 5px;
+ box-shadow: 0 9px #F344B9 ;
+}
+
+input[type=submit]:hover {
+   border: 1px solid #999;
+   color: #F344B9;
+}
+
+input[type=submit]:active {
+ background-color: #3e8e41 ;
+ box-shadow: 0 5px #666;
+ transform: translateY(4px);
+}
+
+#search-field {
+ transition: opacity 0.25s linear;
+
+ opacity: 0;
+ left: 0;
+ top: 0;
+}
+#search-icon:hover + #search-field {
+ opacity: 1;
+}
+
+input[type=text] {
+ display: inline-block;
+ border-radius: 20px;
+ background-color: #F344B9 ;
+ border: none;
+ color: #2980B9 ;
+ text-align: center;
+ font-size: 18px;
+ padding: 20px;
+ width: 250px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin: 5px;
+ box-shadow: 0 9px #2980B9;
+}
+
+input[type=text]:hover {
+   border: 1px solid #999;
+   color: #000;
+}
+
+input[type=text]:active {
+ background-color: #3e8e41 ;
+ box-shadow: 0 5px #666;
+ transform: translateY(4px);
+}
+
+
+</style>

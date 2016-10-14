@@ -1,7 +1,188 @@
-<h1><%= @game.player_1.name %> vs. <%= @game.player_2.name %></h1>
-<h1><%= @game.player_1.name %>'s Hitpoints = <%= @game.player_1.hp %></h1>
-<h1><%= @game.player_2.name %>'s Hitpoints = <%= @game.player_2.hp %></h1>
+<body>
+<div>
+   <div id="play1">
+     <h1 id="Play1name"><%= @game.players[0].name %></h1>
+     <img src="http://i.imgur.com/MbWEldE.gif">
+   </div>
+   <div id="VS">
+     <img src="http://i.imgur.com/kebybDm.png">
+   </div>
+   <div id="play2">
+     <h1 id="Play1name"><%= @game.players[1].name %></h1>
+     <img src="http://i.imgur.com/9QvfePo.gif">
+   </div>
+</div>
+<div style="clear:both"></div>
+
+<div id ="bottom">
+<h2 id="Play1HP"><%= @game.players[0].name %>'s Hit Points = <%= @game.players[0].hp %></h2>
+<h2 id="Play2HP"><%= @game.players[1].name %>'s Hit Points = <%= @game.players[1].hp %></h2>
+</div>
+
+<div class="container">
+  <div id="Kenny">
+<img src="http://images4.fanpop.com/image/photos/23000000/don-t-kil-kenny-south-park-23084195-265-222.gif"/>
+  </div>
+  <div id="Attack">
 
 <FORM METHOD="Link" ACTION="/attack">
-<INPUT TYPE="submit" VALUE="Attack">
+<INPUT TYPE="submit" VALUE="Attack" id="search-icon">
+<input type="text" id="search-field" value="Feel my power!!!" />
 </FORM>
+</div>
+
+
+</body>
+
+
+<style>
+body {
+  background-image: url("http://cdn.wallpapersafari.com/19/90/0lYiVx.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 50%
+}
+
+
+#play1 {
+float:left;
+width: 40%;
+}
+
+#VS {
+float:left;
+width: 20%;
+}
+
+#play2 {
+float:left;
+width: 40%;
+}
+
+#Play1name {
+  text-align: center;
+  color: #2980B9;
+  font-family: "Papyrus";
+  font-size: 70px;
+  font-weight: 900
+}
+
+#Play2name {
+  text-align: center;
+  color: #F344B9;
+  font-family: "Papyrus";
+  font-size: 70px;
+  font-weight: 900
+}
+#Play1HP {
+  float:left;
+  text-align: center;
+  width: 50%;
+  color: #2980B9;
+  font-family: "Papyrus";
+  font-size: 50px;
+  font-weight: 900
+}
+
+#Play2HP {
+  float:left;
+  text-align: center;
+  width: 50%;
+  color: #F344B9;
+  font-family: "Papyrus";
+  font-size: 50px;
+  font-weight: 900
+}
+
+#button
+
+
+.container {
+    width: 100px;
+    height: 120px;
+}
+
+.container img {
+    width: 30%;
+    height: auto;
+}
+
+#Attack {
+  float:left;
+  width: 50%;
+}
+
+#Kenny {
+  float:left;
+  width: 50%;
+}
+img {
+  display: block;
+  margin: auto;
+  width:45%
+}
+
+input[type=submit] {
+ display: inline-block;
+ border-radius: 20px;
+ background-color: #2980B9;
+ border: none;
+ color: #FFFFFF ;
+ text-align: center;
+ font-size: 18px;
+ padding: 20px;
+ width: 100px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin: 5px;
+ box-shadow: 0 9px #F344B9 ;
+}
+
+input[type=submit]:hover {
+   border: 1px solid #999;
+   color: #F344B9;
+}
+
+input[type=submit]:active {
+ background-color: #3e8e41 ;
+ box-shadow: 0 5px #666;
+ transform: translateY(4px);
+}
+
+#search-field {
+ transition: opacity 0.25s linear;
+
+ opacity: 0;
+ left: 0;
+ top: 0;
+}
+#search-icon:hover + #search-field {
+ opacity: 1;
+}
+
+input[type=text] {
+ display: inline-block;
+ border-radius: 20px;
+ background-color: #F344B9 ;
+ border: none;
+ color: #2980B9 ;
+ text-align: center;
+ font-size: 18px;
+ padding: 20px;
+ width: 250px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin: 5px;
+ box-shadow: 0 9px #2980B9;
+}
+
+input[type=text]:hover {
+   border: 1px solid #999;
+   color: #000;
+}
+
+input[type=text]:active {
+ background-color: #3e8e41 ;
+ box-shadow: 0 5px #666;
+ transform: translateY(4px);
+}
+</style>

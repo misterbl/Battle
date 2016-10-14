@@ -1,6 +1,85 @@
-<h1><%= @game.player_2.name %> has attacked!</h1>
+
+<body>
+<div id="has_attacked">
+<h1><%= @game.player_2.name %><br> has attacked!</h1>
+</div>
+
+<div id="Image">
+<img src="https://66.media.tumblr.com/3592a3c04536bb3d866c669d547eda65/tumblr_n1tj3veY4M1ttu7c2o1_500.gif" border="10">
+<br><br>
+<div id="form">
+<form METHOD="Post" ACTION="/check">
+<INPUT class="round-button" TYPE="submit" VALUE="Continue" >
+</form>
+</div>
+</div>
+
+<div id="HP">
 <h1><%= @game.player_2.name %> has now got <%= @game.player_2.hp %>HP!</h1>
+<br><br>
 <h1><%= @game.player_1.name %> has now got <%= @game.player_1.hp %>HP!</h1>
-<FORM METHOD="Post" ACTION="/check">
-<INPUT TYPE="submit" VALUE="Continue battle" >
-</FORM>
+</div>
+
+</body>
+
+<style>
+body {
+  background-image: url("http://spinyourfire.com/wp-content/uploads/2014/10/fire-phone-background-img2.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%
+}
+
+#form {
+margin: 0 auto;
+width:250px;
+}
+
+.round-button {
+   display:block;
+   width:200px;
+   height:200px;
+   line-height:50px;
+   border: 20px solid #2980D9 ;
+   border-radius: 50%;
+   color:#f5f5f5 ;
+   text-align:center;
+   text-decoration:none;
+   background: #1767D4 ;
+   box-shadow: 0 0 3px gray;
+   font-size:20px;
+   font-weight:bold;
+}
+.round-button:hover {
+   background: #F344B9 ;
+}
+
+#has_attacked {
+float:left;
+width: 20%;
+text-align: center;
+color: #2980B9;
+font-family: "Papyrus";
+font-size: 40px;
+font-weight: 900
+}
+
+#Image{
+float:left;
+width: 60%;
+}
+
+#HP {
+float:left;
+width: 20%;
+text-align: center;
+color: #2980B9;
+font-family: "Papyrus";
+font-size: 20px;
+font-weight: 900
+}
+
+img {
+  display: block;
+  margin: auto;
+  width:80%
+}

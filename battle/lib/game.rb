@@ -8,14 +8,15 @@ end
 
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
+    @turn = [player_1, player_2]
   end
 
   def player_1
-    @players.first
+    @turn.first
   end
 
   def player_2
-    @players.last
+    @turn.last
   end
 
   def attack(player)
@@ -24,11 +25,11 @@ end
   end
 
   def turn_switcher
-    @players.reverse!
+    @turn.reverse!
   end
 
   def lose?
-    if (@players.first.hp || @players.last.hp) == 0
+    if @players.first.hp == 0 || @players.last.hp == 0
       return true
     else
       return false
